@@ -82,6 +82,13 @@ var	deleteItem = function (){
 };
 					
 var clearLocal = function(){
-
+$('#clear').on('click', function(){
+	if(localStorage.length == 0){
+		alert('There are no vehicles to clear!');
+	}else{
+	localStorage.clear();
+        alert('All vehicles have been cleared!');
+	}
+})
 };
 
