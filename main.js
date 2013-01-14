@@ -89,6 +89,6 @@ $('#clear').on('click', function(){
 	localStorage.clear();
         alert('All vehicles have been cleared!');
 	}
-})
-};
+});
+
 
