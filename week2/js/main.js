@@ -22,6 +22,11 @@ $("#additem").on('pageinit', function(){
     });
 });
 
+// New Page Load Data //
+
+$('#loadData').on('pageinit', function(){});
+
+
     $('#displayLink').on('click', function(){
 	    displayLinks();
 });
