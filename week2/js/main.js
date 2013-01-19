@@ -25,34 +25,14 @@ $("#additem").on('pageinit', function(){
 // New Page Load Data //
 $('#loaddata').on('pageinit', function(){
 
-$('#loadjson').on('click', function(){
-	    $('.events').remove();
-	    $.ajax({
-	    	url:'data.json',
-	    	type:'GET',
-	    	dataType:'json',
-	    	success:function(json) {
-	    		console.log(json);
-	    		for(var i = 0, j = json.data.length; i < j; i++){
-	    			var myJson = json.data[i];
-	    			$('' +
-	    				'<ul class="events">' +
-	    				    '<li> fname: ' + myJson.fname + '</li>' +
-	    				    '<li> lname: ' + myJson.lname + '</li>' +
-	    				    '<li> date: ' + myJson.date + '</li>' +
-	    				    '<li> vehicle: ' + myJson.vehicle + '</li>' +
-	    				    '<li> year: ' + myJson.year + '</li>' +
-	    				    '<li> email: ' + myJson.email + '</li>' +
-	    				    '<li> miles: ' + myJson.miles + '</li>' +
-	    				    '<li> comments: ' + myJson.comments + '</li>' +
-	    				'</ul>'
-	    				).appendTo('#eventDisplay');
-	    			$.mobile.changePage("#displayItems");
-	    		}
-              }
-	    	});
 
-	    });
+})
+
+
+$('#loadjson').on('click', function(){
+
+})
+	    
 	
 
 $('#displayLink').on('click', function(){
