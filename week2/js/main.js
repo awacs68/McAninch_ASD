@@ -24,9 +24,9 @@ $("#additem").on('pageinit', function(){
 
 // New Page Load Data //
 $('#loaddata').on('pageinit', function(){
+    
 
-
-})
+});
 
 
 $('#loadjson').on('click', function(){
