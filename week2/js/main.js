@@ -23,11 +23,39 @@ $("#additem").on('pageinit', function(){
 });
 
 // New Page Load Data //
+$('#loaddata').on('pageinit', function(){
 
-$('#loadData').on('pageinit', function(){});
+$('#loadjson').on('click', function(){
+	    $('.events').remove();
+	    $.ajax({
+	    	url:'data.json',
+	    	type:'GET',
+	    	dataType:'json',
+	    	success:function(json) {
+	    		console.log(json);
+	    		for(var i = 0, j = json.data.length; i < j; i++){
+	    			var myJson = json.data[i];
+	    			$('' +
+	    				'<ul class="events">' +
+	    				    '<li> fname: ' + myJson.fname + '</li>' +
+	    				    '<li> lname: ' + myJson.lname + '</li>' +
+	    				    '<li> date: ' + myJson.date + '</li>' +
+	    				    '<li> vehicle: ' + myJson.vehicle + '</li>' +
+	    				    '<li> year: ' + myJson.year + '</li>' +
+	    				    '<li> email: ' + myJson.email + '</li>' +
+	    				    '<li> miles: ' + myJson.miles + '</li>' +
+	    				    '<li> comments: ' + myJson.comments + '</li>' +
+	    				'</ul>'
+	    				).appendTo('#eventDisplay');
+	    			$.mobile.changePage("#displayItems");
+	    		}
+              }
+	    	});
 
+	    });
+	
 
-    $('#displayLink').on('click', function(){
+$('#displayLink').on('click', function(){
 	    displayLinks();
 });
 
@@ -38,6 +66,9 @@ $("#news").on("pageinit", function(){
 $("#info").on("pageinit", function(){
 
 });
+
+
+
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed. 
 
@@ -57,7 +88,7 @@ var autoFillData = function (){
    
 
 var getData = function(){
-$('#nav li').on('click');
+
 };
 
 
@@ -100,10 +131,10 @@ var	deleteItem = function (){
 var clearLocal = function(){
 $('#clear').on('click', function(){
 	if(localStorage.length == 0){
-		alert('There are no vehicles to clear!');
+		alert('There are no vehicles to delete!');
 	}else{
 	localStorage.clear();
-        alert('All vehicles have been cleared!');
+        alert('All vehicles have been deleted!');
 	}
 });
 };
