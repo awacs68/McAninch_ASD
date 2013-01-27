@@ -12,7 +12,7 @@ var json = {
          "year": ["Year:", "1975"],
          "email": ["Email:", "awacs68@fullsail.edu"],
          "miles": ["Miles:", "4000"],
-         "comments": ["Comments:", "Changed the oil"],
+         "comments": ["Comments:", "Changed the oil"]
       },
       "vehicle2": {
          "fname": ["First Name:", "Jan"],
@@ -22,7 +22,7 @@ var json = {
          "year": ["Year:", "2008"],
          "email": ["Email:", "awacs68@cox.net"],
          "miles": ["Miles:", "3000"],
-         "comments": ["Comments:", "Changed the oil, and air filter"],
+         "comments": ["Comments:", "Changed the oil, and air filter"]
       },
       "vehicle3": {
          "fname": ["First Name:", "Ashley"],
@@ -205,7 +205,7 @@ var json = {
          "comments": ["Comments:", "Changed oil, and Airfilter"]
       }
 
-       }
+       };
 
 
    
